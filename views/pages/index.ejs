@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/scripts/main.js" type="module" defer></script>
-        <title>Laagdrempelig Zoeken</title>
-    </head>
 
-    <body>
-        <h1>Hi</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<head>
+    <%- include("./partials/head");%>
+</head>
 
-        <input
-            type="text"
-            name="query"
-            placeholder="What would you like to find"
-            id="query"
-        />
-        <button type="submit" id="searchButton">Search</button>
-    </body>
+<header>
+    <%- include("./partials/header");%>
+</header>
+
+
+
+<body>
+
+    <main>
+        <div class="introduction">
+
+            <h1>Vind moeiteloos boeken en activiteiten met onze <span class="highlight-text">oba assistent </span></h1>
+            <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+            <div class="intro-illustrations">
+               
+                <video src="./images/intro-vid.mp4"  controls  autoplay loop></video>
+            </div>
+
+        </div>
+
+        <div class="chat-container">
+            <img src="./images/chaticon.svg" alt="ChatIcon" id="chatIcon">
+            <div class="chat-box" id="chatBox">
+                <h2>Chat Box</h2>
+                <p>This is the chat content.</p>
+                 <img src="./images/oba-assistant.png" alt=""  >
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- 
+    <input type="text" name="query" placeholder="What would you like to find" id="query" />
+    <button type="submit" id="searchButton">Search</button> -->
+    <%- include ("./partials/footer") %>
+
+</body>
+
+
 </html>
