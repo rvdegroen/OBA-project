@@ -20,10 +20,29 @@
 //     }
 // });
 
-console.log('JavaScript code is running');
-const chatIcon = document.getElementById('chatIcon');
-const chatBox = document.getElementById('chatBox');
+// console.log('JavaScript code is running');
+// const chatIcon = document.getElementById('chatIcon');
+// const chatBox = document.getElementById('chatBox');
 
-chatIcon.addEventListener('click', function () {
-    chatBox.style.display = (chatBox.style.display === 'none') ? 'block' : 'none';
+// chatIcon.addEventListener('click', function () {
+//     chatBox.style.display = (chatBox.style.display === 'none') ? 'block' : 'none';
+// });
+
+const chatIcon = document.getElementById("chatIcon");
+const dialog = document.querySelector("dialog");
+
+chatIcon.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        dialog.close();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+        dialog.close();
+    }
 });
