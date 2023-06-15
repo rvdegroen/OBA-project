@@ -7,15 +7,28 @@
 
     <body>
         <%- include("../partials/nav");%>
-        <h1>Hi</h1>
+        <h1 class="oba-title">OBA Catalogus</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <input
-            type="text"
-            name="query"
-            placeholder="What would you like to find"
-            id="query"
-        />
-        <button type="submit" id="searchButton">Search</button>
+        <div class="introduction">
+            <img
+                src="/images/character/animation/frame1.png"
+                alt="circle for animation"
+                class="animation-image"
+            />
+        </div>
+
+        <div class="chat">
+            <input
+                type="text"
+                name="query"
+                placeholder="What would you like to find"
+                id="query"
+                class="chat__bar"
+            />
+            <button type="submit" id="searchButton" class="chat__button">
+                Search
+            </button>
+        </div>
     </body>
 </html>

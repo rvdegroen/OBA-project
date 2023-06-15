@@ -19,3 +19,8 @@ searchButton.addEventListener('click', async () => {
         console.error(errorMessage);
     }
 });
+
+setTimeout(function () {
+    const animationImage = document.querySelector('.animation-image');
+    animationImage.src = '/images/character/animation/frame2.png';
+}, 2000);
