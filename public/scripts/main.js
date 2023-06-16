@@ -30,6 +30,9 @@
 
 const chatIcon = document.getElementById("chatIcon");
 const dialog = document.querySelector("dialog");
+const closeBtn = document.getElementById("close-btn");
+const fagBtn = document.getElementById("faq-btn")
+const faqContent = document.querySelector(".faq-content")
 
 chatIcon.addEventListener("click", () => {
     dialog.showModal();
@@ -45,4 +48,18 @@ document.addEventListener("click", (event) => {
     if (event.target === dialog) {
         dialog.close();
     }
+});
+
+
+closeBtn.addEventListener("click", () => {
+    dialog.close()
+})
+
+// fagBtn.addEventListener("clcik", ()=> {
+//     faqContent.showModal();
+// })
+
+
+fagBtn.addEventListener("click", () => {
+    faqContent.style.display = "block";
 });

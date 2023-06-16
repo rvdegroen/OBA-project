@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <%- include("./partials/head");%>
+    <%- include("../partials/head");%>
 </head>
 
 <header>
-    <%- include("./partials/header");%>
+    <%- include("../partials/header");%>
 </header>
 
 
@@ -25,24 +25,47 @@
 
         </div>
 
+
         <div class="chat-icon-wrapper">
             <img src="./images/chaticon.svg" alt="ChatIcon" id="chatIcon">
         </div>
 
-        <dialog>
-            <h2>Chat Box</h2>
-            <p>This is the chat content.</p>
-            <img src="./images/oba-assistant.png" alt="">
 
-            <div class="chat-bar">
-                <form action="">
-                    <input type="text" name="" id="">
-                    <button type="submit">Verzend</button>
-                </form>
+        <dialog>
+            <div class="chat-header">
+                <button id="faq-btn"><span>?</span><span>FAQ</span></button>
+                <p>Zoek met ons</p>
+                <button type="button" id="close-btn">X </button>
             </div>
 
+            <dialog class="faq-content">
+                <ul>
+                    <li><a href="">Over pas, account en gegevens </a> </li>
+                    <li><a href="">Over pas, account en gegevens</a> </li>
+                    <li><a href="">Over pas, account en gegevens</a> </li>
+                    <li><a href="">Over pas, account en gegevens</a> </li>
+                    <li><a href="">Over pas, account en gegevens</a> </li>
+                    <li><a href="">Over pas, account en gegevens</a> </li>
+                </ul>
+            </dialog>
+
+            <div class="chat-content">
+
+                <!-- <img src="./images/oba-assistant.png" alt=""> -->
+                <div>
+                    <img src="./images/oba-assistant.png" alt=""  class="assistant-chat">
+                </div>
+
+                <div class="chat-bar">
+                    <form action="">
+                        <input type="text" name="" id="" placeholder="typ hier in... ">
+                        <button type="submit"><img src="./images/send-btn.svg" alt="" class="send-btn"></button>
+                    </form>
+                </div>
+            </div>
 
         </dialog>
+
 
     </main>
 
@@ -50,7 +73,7 @@
     <!-- 
     <input type="text" name="query" placeholder="What would you like to find" id="query" />
     <button type="submit" id="searchButton">Search</button> -->
-    <%- include ("./partials/footer") %>
+    <%- include ("../partials/footer") %>
 
 </body>
 

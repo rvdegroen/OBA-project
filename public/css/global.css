@@ -82,7 +82,24 @@ h1 {
     }
 
     h1 {
-        text-align: center;
-        font-size: 1.7rem;
+        text-align: left;
+        font-size: 2rem;
     }
+    
+.intro-imgs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.introduction img:nth-of-type(2) {
+    width: 200px;
+    top: 12em;
+    right: 2em;
+    position: absolute;
+}
+
+
+
+
 }
