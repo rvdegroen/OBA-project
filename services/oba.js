@@ -1,26 +1,39 @@
-exports.search = function (entities) {
-    let results = [
-        // dummy hard-coded code NORMAL FETCH INSTEAD
-        {
-            type: 'Book',
-            title: 'How to cook for absolute beginners',
-            author: 'Adam Adams',
-        },
-        {
-            type: 'Book',
-            title: 'How to be the next Masterchef',
-            author: 'Gordon Ramsey',
-        },
-    ];
+const jwt = require('jsonwebtoken');
+const axios = require('axios');
 
-    // entities:
-    /* {
-        type: 'book',
-        category: 'cooking',
-    } */
+const BASE_URL = 'https://zoeken.oba.nl/api/v1';
 
-    // 2. We need to use the OBA API to find results based on the information what we extracted from the user query
-    // 3. Provide the results to the frontend so that it can be shown to the user
+const api = axios.create({
+    baseURL: BASE_URL,
+    headers: { 'Content-Type': 'application/json' },
+});
 
-    return results;
+function createBearerToken() {
+    const secret = process.env.SECRET;
+    const publicKey = process.env.PUBLIC_KEY;
+
+    const expiresInMinutes = 15;
+
+    const expirationDate =
+        Math.floor(Date.now() / 1000) + expiresInMinutes * 60;
+
+    const payload = {
+        key: publicKey,
+        exp: expirationDate,
+        description: 'HvA_student',
+    };
+
+    const token = jwt.sign(payload, secret);
+
+    return `Bearer ${token}`;
+}
+
+exports.search = async function (query) {
+    const token = createBearerToken();
+
+    const response = await api.get(`/search/?q=${query}&output=json`, {
+        headers: { Authorization: token },
+    });
+
+    return response.data.results;
 };
