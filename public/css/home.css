@@ -248,6 +248,11 @@ dialog ::backdrop {
 
 }
 
+.chat-bar label {
+    font-size: .8rem;
+
+}
+
 .send-btn {
     background-color: none;
     margin-right: 2em;

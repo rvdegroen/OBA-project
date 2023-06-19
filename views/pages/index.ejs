@@ -53,15 +53,21 @@
 
                 <!-- <img src="./images/oba-assistant.png" alt=""> -->
                 <div>
-                    <img src="./images/oba-assistant.png" alt=""  class="assistant-chat">
+                    <img src="./images/oba-assistant.png" alt="" class="assistant-chat">
                 </div>
 
+                <div id="results"></div>
+
                 <div class="chat-bar">
-                    <form action="">
-                        <input type="text" name="" id="" placeholder="typ hier in... ">
+                    <form action="/"  id="searchForm">
+                        <label for="queryInput">Zoek</label>
+                        <input type="text" id="queryInput" name="query" placeholder="typ hier in..." required>
                         <button type="submit"><img src="./images/send-btn.svg" alt="" class="send-btn"></button>
                     </form>
+
+                    <ul id="bookList"></ul>
                 </div>
+
             </div>
 
         </dialog>
