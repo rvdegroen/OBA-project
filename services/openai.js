@@ -3,8 +3,14 @@ exports.parseQuery = function (query) {
 
     // 1. "I would like to find a book about cooking" -> book, cooking
 
+    let type = 'boek';
+
+    if (query.includes('film')) {
+        type = 'film';
+    }
+
     return {
-        type: 'book',
-        category: 'cooking',
+        type,
+        topic: query,
     };
 };
