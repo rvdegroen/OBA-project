@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/scripts/main.js" type="module" defer></script>
-        <title>Laagdrempelig Zoeken</title>
+        <%- include("../partials/head");%>
+        <title>OBA Catalogus</title>
     </head>
 
     <body>
-        <h1>Hi</h1>
+        <%- include("../partials/nav");%>
+        <h1 class="oba-title">OBA Catalogus</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
+        <div class="introduction">
+            <img
+                src="/images/character/animation/frame1.png"
+                alt="circle for animation"
+                class="animation-image"
+            />
+        </div>
+
+        <div class="chat">
+            <input
+                type="text"
+                name="query"
+                placeholder="What would you like to find"
+                id="query"
+                class="chat__bar"
+            />
+            <button type="submit" id="searchButton" class="chat__button">
+                Search
+            </button>
+        </div>
         <input
             type="text"
             name="query"

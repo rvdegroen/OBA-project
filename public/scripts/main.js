@@ -21,6 +21,11 @@ searchButton.addEventListener('click', async () => {
     }
 });
 
+setTimeout(function () {
+    const animationImage = document.querySelector('.animation-image');
+    animationImage.src = '/images/character/animation/frame2.png';
+}, 2000);
+=======
 function renderResults(results) {
     for (const searchResult of results) {
         const image = document.createElement('img');
