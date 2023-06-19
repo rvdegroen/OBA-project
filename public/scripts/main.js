@@ -1,4 +1,6 @@
 const searchButton = document.getElementById('searchButton');
+const resultsDiv = document.getElementById('results');
+
 searchButton.addEventListener('click', async () => {
     const input = document.getElementById('query');
 
@@ -12,8 +14,7 @@ searchButton.addEventListener('click', async () => {
 
     if (response.ok) {
         const responseData = await response.json();
-        // PUT FRONTEND JAVASCRIPT CODE HERE
-        // Show books in browser
+        renderResults(responseData);
     } else {
         const errorMessage = await response.text();
         console.error(errorMessage);
@@ -24,3 +25,30 @@ setTimeout(function () {
     const animationImage = document.querySelector('.animation-image');
     animationImage.src = '/images/character/animation/frame2.png';
 }, 2000);
+=======
+function renderResults(results) {
+    for (const searchResult of results) {
+        const image = document.createElement('img');
+        image.src = searchResult.coverimages[1];
+
+        const bookTitle = searchResult.titles[0];
+        const authors = searchResult.authors.join(', ');
+        const formats = searchResult.formats.map((format) => format.text);
+
+        const heading = document.createElement('h2');
+        heading.textContent = `${bookTitle} by ${authors}`;
+
+        const formatsParagraph = document.createElement('p');
+        formatsParagraph.textContent = `Gepubliceerd als: ${formats.join(
+            ', '
+        )}`;
+
+        const container = document.createElement('div');
+        container.appendChild(image);
+        container.appendChild(heading);
+        container.appendChild(formatsParagraph);
+        container.appendChild(document.createElement('hr'));
+
+        resultsDiv.appendChild(container);
+    }
+}

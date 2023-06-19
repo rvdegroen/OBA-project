@@ -13,7 +13,7 @@ exports.postExample = function (req, res) {
 };
 
 // POST /api/search
-exports.search = function (req, res) {
+exports.search = async function (req, res) {
     // Get data from request
     const query = req.body.query;
 
@@ -24,8 +24,8 @@ exports.search = function (req, res) {
         return res.status(400).send('No query provided');
     }
 
-    const entities = openAiService.parseQuery(query);
-    const results = obaService.search(entities);
+    // const entities = openAiService.parseQuery(query);
+    const results = await obaService.search(query);
 
     // Give back results
     return res.json(results);
