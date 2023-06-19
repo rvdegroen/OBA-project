@@ -1,3 +1,9 @@
+// import
+@import url('./nav.css');
+@import url('./chat.css');
+@import url('./introduction.css');
+@import url('./results.css');
+
 *,
 *::before,
 *::after {
@@ -21,72 +27,8 @@ html {
     background-color: var(--background);
 }
 
-nav {
-    display: flex;
-    margin: 20px;
-
-    // logo
-    .logo-div {
-        flex-grow: 1;
-    }
-
-    ul {
-        display: flex;
-        list-style: none;
-        gap: 20px;
-
-        a {
-            display: flex;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--secondary-button-text);
-            background-color: var(--secondary-button-bg);
-            box-shadow: var(--shadow);
-            align-items: center;
-            padding: 5px 20px;
-            border-radius: 50px;
-            transition: 0.2s ease-in-out;
-
-            &:hover {
-                background-color: var(--button-hover-bg);
-                color: var(--button-hover-text);
-                transition: 0.2s ease-in-out;
-            }
-        }
-    }
-}
-
-// introduction animation
-.introduction {
-    display: flex;
-    justify-content: center;
-
-    img {
-        width: 35vw;
-    }
-}
-
 // to hide the title on the first page
 .oba-title {
     opacity: 0;
     position: absolute;
-}
-
-// chatbar
-.chat {
-    display: flex;
-    .chat__bar {
-        box-shadow: var(--shadow);
-        border: none;
-        border-radius: 50px;
-        padding: 10px 20px;
-        font-size: 15px;
-        width: 35em;
-    }
-
-    .chat__button {
-        display: absolute;
-        transform: translateX(-65px);
-        padding: 0 10px;
-    }
 }

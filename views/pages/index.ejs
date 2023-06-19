@@ -10,34 +10,34 @@
         <h1 class="oba-title">OBA Catalogus</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
+        <!-- animation image -->
         <div class="introduction">
             <img
                 src="/images/character/animation/frame1.png"
                 alt="circle for animation"
-                class="animation-image"
+                class="introduction_image"
             />
         </div>
 
+        <!-- chat bar -->
         <div class="chat">
+            <!-- frequently asked questions -->
+            <div class="chat_faq"></div>
             <input
                 type="text"
                 name="query"
                 placeholder="What would you like to find"
                 id="query"
-                class="chat__bar"
+                class="chat_bar"
             />
-            <button type="submit" id="searchButton" class="chat__button">
+            <button type="submit" id="searchButton" class="chat_button">
                 Search
             </button>
         </div>
-        <input
-            type="text"
-            name="query"
-            placeholder="What would you like to find"
-            id="query"
-        />
-        <button type="submit" id="searchButton">Search</button>
-<hr>
-        <div id="results"></div>
+
+        <!-- results, check renderResult for elements -->
+        <div id="results">
+            <h2>Hello</h2>
+        </div>
     </body>
 </html>

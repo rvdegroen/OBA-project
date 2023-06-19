@@ -1,0 +1,17 @@
+.chat {
+  display: flex;
+  justify-content: center;
+}
+.chat .chat_bar {
+  box-shadow: var(--shadow);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 15px;
+  width: 35em;
+}
+.chat .chat_button {
+  display: absolute;
+  transform: translateX(-65px);
+  padding: 0 10px;
+}/*# sourceMappingURL=chat.css.map */

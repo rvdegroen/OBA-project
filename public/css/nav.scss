@@ -1,0 +1,36 @@
+// nav for desktop & mobile
+
+nav {
+    display: flex;
+    margin: 20px;
+
+    // logo
+    .logo-div {
+        flex-grow: 1;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        a {
+            display: flex;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--secondary-button-text);
+            background-color: var(--secondary-button-bg);
+            box-shadow: var(--shadow);
+            align-items: center;
+            padding: 5px 20px;
+            border-radius: 50px;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var(--button-hover-bg);
+                color: var(--button-hover-text);
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+}
