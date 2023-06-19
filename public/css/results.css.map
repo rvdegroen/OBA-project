@@ -1,1 +1,9 @@
-{"version":3,"sources":["results.scss","results.css"],"names":[],"mappings":"AAEA;EACI,gBAAA;ACDJ;ADEI;EACI,UAAA;ACAR","file":"results.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACL,UAAU,EAAE,IAAI;CAInB;;AALD,AAEI,QAFI,CAEJ,EAAE,CAAC;EACC,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "results.scss"
+    ],
+    "names": [],
+    "file": "results.css"
+}

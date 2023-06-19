@@ -1,21 +1,65 @@
-// nav for desktop & mobile
-
 nav {
-    display: flex;
-    margin: 20px;
-
-    // logo
-    .logo-div {
-        flex-grow: 1;
-    }
-
     ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 0.7rem;
+      list-style: none;
+      background-color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        margin-bottom: 10px;
+  
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          text-decoration: none;
+          color: #000;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 44em) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+  
+      .logo-div {
+        flex-grow: 1;
+      }
+  
+      ul {
         display: flex;
+        justify-content: flex-end;
         list-style: none;
         gap: 20px;
-
-        a {
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+        z-index: 999;
+  
+        li {
+          display: flex;
+          flex-direction: row;
+  
+          a {
             display: flex;
+            flex-direction: row;
+            font-size: 1rem;
             gap: 10px;
             text-decoration: none;
             color: var(--secondary-button-text);
@@ -25,12 +69,19 @@ nav {
             padding: 5px 20px;
             border-radius: 50px;
             transition: 0.2s ease-in-out;
-
+  
             &:hover {
-                background-color: var(--button-hover-bg);
-                color: var(--button-hover-text);
-                transition: 0.2s ease-in-out;
+              background-color: var(--button-hover-bg);
+              color: var(--button-hover-text);
+              transition: 0.2s ease-in-out;
             }
+  
+            br {
+              display: none;
+            }
+          }
         }
+      }
     }
-}
+  }
+  
