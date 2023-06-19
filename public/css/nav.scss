@@ -1,35 +1,87 @@
-// nav for desktop & mobile
-
 nav {
-    display: flex;
-    margin: 20px;
-
-    // logo
     .logo-div {
-        flex-grow: 1;
+        margin: 15px;
     }
-
     ul {
         display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 0.7rem;
         list-style: none;
-        gap: 20px;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
 
-        a {
+        li {
+            padding: 10px 0 10px 0;
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    nav {
+        display: flex;
+        margin: 20px;
+
+        .logo-div {
+            flex-grow: 1;
+        }
+
+        ul {
             display: flex;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--secondary-button-text);
-            background-color: var(--secondary-button-bg);
-            box-shadow: var(--shadow);
-            align-items: center;
-            padding: 5px 20px;
-            border-radius: 50px;
-            transition: 0.2s ease-in-out;
+            justify-content: flex-end;
+            list-style: none;
+            gap: 20px;
+            background-color: transparent;
+            position: static;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            margin: 0;
+            z-index: 999;
 
-            &:hover {
-                background-color: var(--button-hover-bg);
-                color: var(--button-hover-text);
-                transition: 0.2s ease-in-out;
+            li {
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 1rem;
+                    gap: 10px;
+                    text-decoration: none;
+                    color: var(--secondary-button-text);
+                    background-color: var(--secondary-button-bg);
+                    box-shadow: var(--shadow);
+                    align-items: center;
+                    padding: 5px 20px;
+                    border-radius: 50px;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        background-color: var(--button-hover-bg);
+                        color: var(--button-hover-text);
+                        transition: 0.2s ease-in-out;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }
