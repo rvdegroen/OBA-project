@@ -30,3 +30,22 @@ exports.search = async function (req, res) {
     // Give back results
     return res.json(results);
 };
+
+// GET /api/details?id=
+exports.getDetails = async function (req, res) {
+    // Get data from request
+    const id = req.query.id;
+
+    console.log('id', id);
+
+    // No query: send back error to frontend
+    if (!id) {
+        return res.status(400).send('No id provided');
+    }
+
+    // const entities = openAiService.parseQuery(query);
+    const record = await obaService.getDetails(id);
+
+    // Give back results
+    return res.json(record);
+};

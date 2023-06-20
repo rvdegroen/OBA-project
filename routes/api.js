@@ -10,5 +10,6 @@ router
 
 // .post(object.function-in-the-object)
 router.route('/search/').post(apiController.search);
+router.route('/details/').get(apiController.getDetails);
 
 module.exports = router;
