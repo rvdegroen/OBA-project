@@ -49,6 +49,6 @@
 }
 @media (min-width: 1000px) {
   .chat {
-    bottom: 20px;
+    bottom: 0px;
   }
 }/*# sourceMappingURL=chat.css.map */
