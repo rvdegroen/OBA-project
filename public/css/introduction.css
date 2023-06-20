@@ -1,7 +1,13 @@
 .introduction {
-  display: flex;
-  justify-content: center;
+  display: none;
 }
-.introduction img {
-  width: 35vw;
+
+@media (min-width: 1000px) {
+  .introduction {
+    display: flex;
+    justify-content: center;
+  }
+  .introduction img {
+    width: 35vw;
+  }
 }/*# sourceMappingURL=introduction.css.map */
