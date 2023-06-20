@@ -1,5 +1,13 @@
-nav .logo-div {
+nav {
+  display: flex;
   margin: 15px;
+  align-items: center;
+}
+nav .logo-div {
+  flex-grow: 1;
+}
+nav .virtual-assistant {
+  display: visible;
 }
 nav ul {
   display: flex;
@@ -35,6 +43,9 @@ nav ul li a {
   }
   nav .logo-div {
     flex-grow: 1;
+  }
+  nav .virtual-assistant {
+    display: none;
   }
   nav ul {
     display: flex;

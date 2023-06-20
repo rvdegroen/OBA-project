@@ -1,7 +1,17 @@
+// mobile
 nav {
+    display: flex;
+    margin: 15px;
+    align-items: center;
+
     .logo-div {
-        margin: 15px;
+        flex-grow: 1;
     }
+
+    .virtual-assistant {
+        display: visible;
+    }
+
     ul {
         display: flex;
         align-items: center;
@@ -31,6 +41,7 @@ nav {
     }
 }
 
+// desktop
 @media (min-width: 1000px) {
     nav {
         display: flex;
@@ -38,6 +49,10 @@ nav {
 
         .logo-div {
             flex-grow: 1;
+        }
+
+        .virtual-assistant {
+            display: none;
         }
 
         ul {
