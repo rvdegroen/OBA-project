@@ -18,10 +18,14 @@ export function renderResults(results) {
         )}`;
 
         const container = document.createElement('a');
-        container.setAttribute('href', '#');
-        container.appendChild(image);
-        container.appendChild(heading);
-        container.appendChild(formatsParagraph);
+        const div = document.createElement('div');
+
+        // go to /details/${object.id}
+        container.setAttribute('href', `/details/${searchResult.id}`);
+        container.appendChild(div);
+        div.appendChild(image);
+        div.appendChild(heading);
+        div.appendChild(formatsParagraph);
         // container.appendChild(document.createElement('hr'));
 
         resultsDiv.appendChild(container);
