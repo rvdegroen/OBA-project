@@ -1,10 +1,12 @@
 .chat {
   width: 100%;
-  background-color: red;
+  background-color: var(--background);
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 100px;
+  position: fixed;
+  bottom: 80px;
+  z-index: 0;
+  height: 70px;
 }
 .chat .chat_bar {
   position: relative;
@@ -13,11 +15,40 @@
   justify-content: flex-end;
 }
 .chat .chat_bar .chat_bar_input {
-  padding: 10px;
+  padding: 15px;
   width: 80vw;
+  max-width: 40em;
+  border-radius: 50px;
+  border: none;
+  box-shadow: var(--shadow);
 }
 .chat .chat_bar .chat_bar_button {
   position: absolute;
-  height: 100%;
-  padding: 0 10px;
+  padding: 15px;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
+  font-weight: bold;
+}
+.chat .chat_bar .chat_bar_button:hover {
+  background-color: var(--primary-button-hover);
+}
+
+@media (min-width: 410px) {
+  .chat_bar_input,
+  .chat_bar_button {
+    font-size: 1rem;
+  }
+  .chat_bar_input {
+    padding: 15px 30px !important;
+  }
+  .chat_bar_button {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .chat {
+    bottom: 20px;
+  }
 }/*# sourceMappingURL=chat.css.map */
