@@ -15,6 +15,9 @@
   --background: #f5f5f5;
   --secondary-button-bg: #ffffff;
   --secondary-button-text: #000000;
+  --primary-button-bg: #3c389e;
+  --primary-button-text: white;
+  --primary-button-hover: #242174;
   --shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
   --button-hover-bg: #3c389e;
   --button-hover-text: #ffffff;
