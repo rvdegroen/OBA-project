@@ -4,9 +4,9 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  bottom: 80px;
+  bottom: 76px;
   z-index: 0;
-  height: 70px;
+  height: 80px;
 }
 .chat .chat_bar {
   position: relative;
@@ -15,16 +15,16 @@
   justify-content: flex-end;
 }
 .chat .chat_bar .chat_bar_input {
-  padding: 15px;
+  padding: 10px;
   width: 80vw;
-  max-width: 40em;
+  max-width: 35em;
   border-radius: 50px;
   border: none;
   box-shadow: var(--shadow);
 }
 .chat .chat_bar .chat_bar_button {
   position: absolute;
-  padding: 15px;
+  padding: 10px;
   border-radius: 0 50px 50px 0;
   border: none;
   background-color: var(--primary-button-bg);
@@ -41,10 +41,10 @@
     font-size: 1rem;
   }
   .chat_bar_input {
-    padding: 15px 30px !important;
+    padding: 12px 30px !important;
   }
   .chat_bar_button {
-    padding: 15px 30px;
+    padding: 12px 30px !important;
   }
 }
 @media (min-width: 1000px) {
