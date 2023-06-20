@@ -11,11 +11,60 @@
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
         <div class="detail-pagina">
-            <button onclick="history.back()">Terug</button>
-            <h2><%= record.titles[0] %> by <%= record.authors[0] %></h2>
-            <img src="<%= record.coverimages[1] %>" />
-            <p><%= record.description[0] %></p>
-            <p><%= record.summaries[0] %></p>
+            <button onclick="history.back()">< Terug</button>
+            <div class="detail-pagina_image">
+                <img src="<%= record.coverimages[1] %>" />
+                <div class="detail-pagina_image_icons">
+                    <button>
+                        <span>Favoriet</span>
+                        <span
+                            ><img src="/images/icons/favorite.svg" alt=""
+                        /></span>
+                    </button>
+
+                    <button>
+                        <span>Delen</span>
+                        <span
+                            ><img src="/images/icons/share.svg" alt=""
+                        /></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="detail-pagina_informatie">
+                <h2><%= record.titles[0] %> by <%= record.authors[0] %></h2>
+                <section class="detail-pagina_informatie_samenvatting">
+                    <h3>Samenvatting</h3>
+                    <p><%= record.summaries[0] %></p>
+                </section>
+
+                <section class="detail-pagina_informatie_genres">
+                    <h3>Thema</h3>
+                    <p><%= record.genres[0] %></p>
+                </section>
+
+                <section class="detail-pagina_informatie_auteur">
+                    <h3>Auteur</h3>
+                    <p><%= record.authors[0] %></p>
+                </section>
+
+                <section class="detail-pagina_informatie_uitgever">
+                    <h3>Uitgever</h3>
+                    <p><%= record.publisher[0] %></p>
+                </section>
+
+                <section class="detail-pagina_informatie_taal">
+                    <h3>Taal</h3>
+                    <p><%= record.languages[0] %></p>
+                </section>
+
+                <div class="detail-pagina_informatie_buttons">
+                    <button class="primary-button">
+                        Waar kan ik dit vinden?
+                    </button>
+                    <button class="secondary-button">OBA Website</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
