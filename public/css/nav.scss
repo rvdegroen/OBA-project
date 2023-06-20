@@ -1,9 +1,12 @@
 // mobile
 nav {
     display: flex;
-    margin: 15px;
+    padding: 10px 15px;
     align-items: center;
     z-index: 10;
+    position: sticky;
+    background-color: var(--background);
+    top: 0;
 
     .logo-div {
         flex-grow: 1;
