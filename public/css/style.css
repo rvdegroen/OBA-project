@@ -2,6 +2,7 @@
 @import url("./chat.css");
 @import url("./introduction.css");
 @import url("./results.css");
+@import url("./details.css");
 *,
 *::before,
 *::after {
@@ -22,6 +23,18 @@
 html {
   font-family: "Inter", sans-serif;
   background-color: var(--background);
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  display: hidden;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-700px);
+  z-index: -999;
 }
 
 .oba-title {
