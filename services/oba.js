@@ -37,3 +37,13 @@ exports.search = async function (query) {
 
     return response.data.results;
 };
+
+exports.getDetails = async function (id) {
+    const token = createBearerToken();
+
+    const response = await api.get(`/details/?id=${id}&output=json`, {
+        headers: { Authorization: token },
+    });
+
+    return response.data.record;
+};

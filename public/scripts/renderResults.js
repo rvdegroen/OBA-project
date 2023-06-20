@@ -2,6 +2,7 @@ export function renderResults(results) {
     const resultsDiv = document.getElementById('results');
 
     for (const searchResult of results) {
+        console.log(searchResult);
         const image = document.createElement('img');
         image.src = searchResult.coverimages[1];
 
@@ -18,10 +19,21 @@ export function renderResults(results) {
         )}`;
 
         const container = document.createElement('a');
-        container.setAttribute('href', '#');
-        container.appendChild(image);
-        container.appendChild(heading);
-        container.appendChild(formatsParagraph);
+        const div = document.createElement('div');
+        const heartButton = document.createElement('button');
+        const detailDiv = document.createElement('div');
+        const publishYear = document.createElement('p');
+        publishYear.textContent = searchResult.year;
+
+        // go to /details/${object.id}
+        container.setAttribute('href', `/details/${searchResult.id}`);
+        container.appendChild(div);
+        div.appendChild(image);
+        div.appendChild(heading);
+        div.appendChild(formatsParagraph);
+        div.appendChild(detailDiv);
+        detailDiv.appendChild(heartButton);
+        detailDiv.appendChild(publishYear);
         // container.appendChild(document.createElement('hr'));
 
         resultsDiv.appendChild(container);

@@ -3,6 +3,7 @@
 @import url('./chat.css');
 @import url('./introduction.css');
 @import url('./results.css');
+@import url('./details.css');
 
 *,
 *::before,
@@ -14,8 +15,14 @@
 
 :root {
     --background: #f5f5f5;
+
     --secondary-button-bg: #ffffff;
     --secondary-button-text: #000000;
+
+    --primary-button-bg: #3c389e;
+    --primary-button-text: white;
+    --primary-button-hover: #242174;
+
     --shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
 
     --button-hover-bg: #3c389e;
@@ -25,6 +32,18 @@
 html {
     font-family: 'Inter', sans-serif;
     background-color: var(--background);
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    display: hidden;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-700px);
+    z-index: -999;
 }
 
 // to hide the title on the first page

@@ -1,7 +1,9 @@
 // check main.js client-side for elements
 
 #results {
-    background: blue;
+    z-index: -999;
+
+    background: var(--background);
     h2 {
         color: red;
     }

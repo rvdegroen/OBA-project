@@ -1,10 +1,18 @@
-// assistent with chatbar
-// introduction animation
-.introduction {
-    display: flex;
-    justify-content: center;
+// virtual-assistent (mobile) and introduction (desktop)
 
-    img {
-        width: 35vw;
+// mobile
+.introduction {
+    display: none;
+}
+
+// desktop
+@media (min-width: 1000px) {
+    .introduction {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 35vw;
+        }
     }
 }

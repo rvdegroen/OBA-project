@@ -1,5 +1,6 @@
 #results {
-  background: blue;
+  z-index: -999;
+  background: var(--background);
 }
 #results h2 {
   color: red;
