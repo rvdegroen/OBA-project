@@ -28,6 +28,18 @@ html {
     background-color: var(--background);
 }
 
+button {
+    cursor: pointer;
+}
+
+h1 {
+    display: hidden;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-700px);
+    z-index: -999;
+}
+
 // to hide the title on the first page
 .oba-title {
     opacity: 0;
