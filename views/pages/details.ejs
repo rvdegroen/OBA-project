@@ -10,6 +10,12 @@
         <h1 class="oba-title">OBA Catalogus</h1>
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <div class="detail-pagina"></div>
+        <div class="detail-pagina">
+            <button onclick="history.back()">Terug</button>
+            <h2><%= record.titles[0] %> by <%= record.authors[0] %></h2>
+            <img src="<%= record.coverimages[1] %>" />
+            <p><%= record.description[0] %></p>
+            <p><%= record.summaries[0] %></p>
+        </div>
     </body>
 </html>
