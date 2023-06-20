@@ -1,17 +1,23 @@
 .chat {
+  width: 100%;
+  background-color: red;
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 100px;
 }
 .chat .chat_bar {
-  box-shadow: var(--shadow);
-  border: none;
-  border-radius: 50px;
-  padding: 10px 20px;
-  font-size: 15px;
-  width: 35em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-.chat .chat_button {
-  display: absolute;
-  transform: translateX(-65px);
+.chat .chat_bar .chat_bar_input {
+  padding: 10px;
+  width: 80vw;
+}
+.chat .chat_bar .chat_bar_button {
+  position: absolute;
+  height: 100%;
   padding: 0 10px;
 }/*# sourceMappingURL=chat.css.map */
