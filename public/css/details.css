@@ -91,6 +91,16 @@
   }
 }
 @media (min-width: 1000px) {
+  .detail-pagina {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+  }
+  .detail-pagina .detail-pagina_informatie h2 {
+    position: static;
+    left: none;
+    transform: none;
+    top: none;
+  }
   .detail-pagina .detail-pagina_informatie section .summary {
     display: block !important;
     margin-bottom: 5px;
