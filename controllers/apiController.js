@@ -24,8 +24,10 @@ exports.search = async function (req, res) {
         return res.status(400).send('No query provided');
     }
 
-    // const entities = openAiService.parseQuery(query);
-    const results = await obaService.search(query);
+    const entities = openAiService.parseQuery(query);
+
+    // entities is an object containing type and topic from openai.js (faking it, chatgpt is supposed to do this)
+    const results = await obaService.search(entities);
 
     // Give back results
     return res.json(results);

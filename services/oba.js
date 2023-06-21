@@ -28,10 +28,18 @@ function createBearerToken() {
     return `Bearer ${token}`;
 }
 
-exports.search = async function (query) {
+// entities is an object from openai.js that has a type and topic
+exports.search = async function (entities) {
     const token = createBearerToken();
+    // if facet is not null (true) then it will be a string of facet=type(entities), otherwise if it's null it will be an empty string
+    const facet = entities.type ? `&facet=type(${entities.type})` : '';
 
-    const response = await api.get(`/search/?q=${query}&output=json`, {
+    const url = `/search/?q=${entities.topic}${facet}&output=json`;
+    // check if facet=website when looking for news
+    console.log('Fetching from OBA', url);
+
+    // entities that is found from the input is being put in the link
+    const response = await api.get(url, {
         headers: { Authorization: token },
     });
 
