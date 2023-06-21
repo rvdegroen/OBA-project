@@ -54,7 +54,7 @@
                     <% if (Array.isArray(record.authors) &&
                     record.authors.length > 0) { %>
                     <h3>Auteur</h3>
-                    <p><%= record.authors[0] %></p>
+                    <p><%= record.authors.join(', ') %></p>
                     <% } %>
                 </section>
 
@@ -70,7 +70,15 @@
                     <% if (Array.isArray(record.languages) &&
                     record.languages.length > 0) { %>
                     <h3>Taal</h3>
-                    <p><%= record.languages[0] %></p>
+                    <p><%= record.languages.join(', ') %></p>
+                    <% } %>
+                </section>
+
+                <section>
+                    <% if (Array.isArray(record.isbn) && record.isbn.length > 0)
+                    { %>
+                    <h3>ISBN</h3>
+                    <p><%= record.isbn.toString().replace(/^=/, '') %></p>
                     <% } %>
                 </section>
 
