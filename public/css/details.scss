@@ -125,7 +125,18 @@
 // desktop
 @media (min-width: 1000px) {
     .detail-pagina {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 1fr;
+
         .detail-pagina_informatie {
+            // title of the page
+            h2 {
+                position: static;
+                left: none;
+                transform: none;
+                top: none;
+            }
+
             // all information about the item
             section {
                 .summary {
