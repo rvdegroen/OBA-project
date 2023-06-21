@@ -93,5 +93,6 @@
 @media (min-width: 1000px) {
   .detail-pagina .detail-pagina_informatie section .summary {
     display: block !important;
+    margin-bottom: 5px;
   }
 }/*# sourceMappingURL=details.css.map */
