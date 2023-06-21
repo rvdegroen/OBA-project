@@ -1,7 +1,112 @@
 #results {
   z-index: -999;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: var(--background);
+  padding: 0;
 }
-#results h2 {
-  color: red;
-}/*# sourceMappingURL=results.css.map */
+
+#results a {
+  text-decoration: none;
+  margin: .5em;
+  line-height: 15px;
+}
+
+#results a .book-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: .5em;
+  padding: 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#results a .book-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+#results a .book-container div img {
+  width: 120px;
+  height: 150px;
+}
+
+#results a .book-container .detail-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  padding: 0;
+}
+
+#results a .book-container .detail-div h3 {
+  color: #3C389E;
+  text-align: left;
+  font-size: 0.7rem;
+}
+
+#results a .book-container .detail-div p {
+  text-decoration: none;
+  font-size: .5rem;
+  text-align: center;
+  color: grey;
+}
+
+@media (min-width: 44em) {
+  #results {
+    z-index: 1;
+    display: -ms-grid;
+    display: grid;
+    margin-left: 15em;
+    margin-right: 15em;
+    position: relative;
+    bottom: 27em;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: var(--background);
+  }
+  #results .book-container img {
+    width: 150px;
+    height: 150px;
+  }
+  #results .book-container .detail-div h3 {
+    font-size: 1.2rem;
+    color: red;
+  }
+  #results .book-container .detail-div p {
+    color: green;
+  }
+}
+/*# sourceMappingURL=results.css.map */

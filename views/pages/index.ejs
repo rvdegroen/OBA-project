@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <%- include("../partials/head");%>
-        <title>OBA Catalogus</title>
-    </head>
 
-    <body>
-        <%- include("../partials/nav");%>
-        <h1 class="oba-title">OBA Catalogus</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<head>
+    <%- include("../partials/head");%>
+    <title>OBA Catalogus</title>
+</head>
 
-        <!-- animation image -->
-        <div class="introduction">
-            <img
-                src="/images/character/animation/frame1.png"
-                alt="circle for animation"
-                class="introduction_image"
-            />
-        </div>
+<body>
+    <%- include("../partials/nav");%>
+    <h1 class="oba-title">OBA Catalogus</h1>
+    <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <!-- results, check renderResult for elements -->
-        <div id="results">
-            <h2>Hello</h2>
-        </div>
+    <!-- animation image -->
+    <div class="introduction">
+        <img src="/images/character/animation/frame1.png" alt="circle for animation" class="introduction_image" />
+    </div>
 
-        <!-- chat bar -->
-        <div class="chat">
-            <!-- frequently asked questions -->
-            <div class="chat_faq"></div>
-            <div class="chat_bar">
-                <input
-                    type="text"
-                    name="query"
-                    placeholder="Wat zoek je in de bieb?"
-                    id="query"
-                    class="chat_bar_input"
-                />
-                <button type="submit" id="searchButton" class="chat_bar_button">
-                    Zoek
-                </button>
+    <!-- results, check renderResult for elements -->
+    <div id="results">
+        <!-- <h2>Hello</h2> -->
+    </div>
+
+    <div class="faq-wrapper hidden" >
+        <div class="chat_faq">
+            <div>
+                <h4>Meeste gestelde vragen</h4>
+                <button id="close-button"> <span>x</span></button>
             </div>
+
+            <ul>
+                <li><a href="#">Ik zoek een boek over </a></li>
+                <li><a href="#">Ik zoek een boek over </a></li>
+                <li><a href="#">Ik zoek een boek over </a></li>
+                <li><a href="#">Ik zoek een boek over </a></li>
+            </ul>
         </div>
-    </body>
+    </div>
+
+    <!-- chat bar -->
+    <div class="chat">
+        <!-- frequently asked questions -->
+
+        <div class="chat_bar">
+            <input type="text" name="query" placeholder="Wat zoek je in de bieb?" id="query" class="chat_bar_input" />
+            <button type="submit" id="searchButton" class="chat_bar_button">
+                Zoek
+            </button>
+        </div>
+    </div>
+</body>
+
 </html>
