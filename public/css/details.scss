@@ -125,7 +125,9 @@
 @media (min-width: 1000px) {
     .detail-pagina {
         display: grid;
-        grid-template-columns: 0.1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 50em;
+        margin: 0 auto;
 
         .detail-pagina_informatie {
             // title of the page
