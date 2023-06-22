@@ -74,7 +74,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             top: 185px;
-            max-width: 30em;
+            width: 95%;
         }
 
         // all information about the item
@@ -126,9 +126,38 @@
     .detail-pagina {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 50em;
-        margin: 0 auto;
+        width: 45em;
+        margin: 50px auto 0 auto;
 
+        // padding-top: 100px;
+
+        // left side
+        .detail-pagina_image {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+
+            // back button
+            .detail-pagina_back-button {
+                margin: 0;
+            }
+
+            // div with img and share and favorite button
+            .detail-pagina_img-and-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // image cover
+                .detail-pagina_image_cover {
+                    margin-top: 32px;
+                    max-width: 175px;
+                }
+            }
+        }
+
+        // right side
         .detail-pagina_informatie {
             // title of the page
             h2 {
@@ -136,14 +165,20 @@
                 left: none;
                 transform: none;
                 top: none;
+                text-align: left;
             }
 
             // all information about the item
             section {
                 .summary {
                     display: block !important;
-                    margin-bottom: 5px;
+
+                    margin: 0 0 5px 0;
                 }
+            }
+
+            .detail-pagina_informatie_buttons {
+                justify-content: flex-start;
             }
         }
     }
