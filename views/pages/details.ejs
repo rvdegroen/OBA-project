@@ -11,11 +11,90 @@
         <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
         <div class="detail-pagina">
-            <button onclick="history.back()">Terug</button>
-            <h2><%= record.titles[0] %> by <%= record.authors[0] %></h2>
-            <img src="<%= record.coverimages[1] %>" />
-            <p><%= record.description[0] %></p>
-            <p><%= record.summaries[0] %></p>
+            <button
+                class="secondary-button detail-pagina_back-button"
+                onclick="history.back()"
+            >
+                < Terug
+            </button>
+            <div class="detail-pagina_image">
+                <img
+                    class="detail-pagina_image_cover"
+                    src="<%= record.coverimages[1] %>"
+                />
+                <div class="detail-pagina_image_icons">
+                    <button>
+                        <span>Favoriet</span>
+                        <span
+                            ><img src="/images/icons/favorite.svg" alt=""
+                        /></span>
+                    </button>
+
+                    <button>
+                        <span>Delen</span>
+                        <span
+                            ><img src="/images/icons/share.svg" alt=""
+                        /></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="detail-pagina_informatie">
+                <h2><%= record.titles[0] %>%></h2>
+
+                <% if (Array.isArray(record.summaries) &&
+                record.summaries.length > 0) { %>
+                <section>
+                    <h3 class="summary">Samenvatting</h3>
+                    <p><%= record.summaries[0] %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.genres) &&
+                record.genres.length > 0) { %>
+                <section>
+                    <h3>Thema</h3>
+                    <p><%= record.genres[0] %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.authors) &&
+                record.authors.length > 0) { %>
+                <section>
+                    <h3>Auteur</h3>
+                    <p><%= record.authors.join(', ') %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.publisher) &&
+                record.publisher.length > 0) { %>
+                <section>
+                    <h3>Uitgever</h3>
+                    <p><%= record.publisher[0] %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.languages) &&
+                record.languages.length > 0) { %>
+                <section>
+                    <h3>Taal</h3>
+                    <p><%= record.languages.join(', ') %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.formats) &&
+                record.formats.length > 0) { %>
+                <section>
+                    <h3>Formaat</h3>
+                    <p><%= record.formats.map((format) => format.text) %></p>
+                </section>
+                <% } %> <% if (Array.isArray(record.isbn) && record.isbn.length
+                > 0) { %>
+                <section>
+                    <h3>ISBN</h3>
+                    <p><%= record.isbn.toString().replace(/^=/, '') %></p>
+                </section>
+                <% } %>
+
+                <div class="detail-pagina_informatie_buttons">
+                    <a
+                        href="<%= record.detailLink %>"
+                        class="secondary-button hi"
+                        >OBA Website</a
+                    >
+                    <button class="primary-button">Waar ligt dit?</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>

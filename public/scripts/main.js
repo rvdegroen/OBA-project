@@ -26,6 +26,9 @@ searchButton.addEventListener('click', async () => {
 
     if (response.ok) {
         const responseData = await response.json();
+        // go through the responseData array, look at the formats
+        // create a new object where the results are grouped by format
+        // and then adjust renderResults to use this
         renderResults(responseData);
     } else {
         const errorMessage = await response.text();
