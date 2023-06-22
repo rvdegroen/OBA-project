@@ -1,8 +1,15 @@
 // imports
 import * as assistantImage from './assistantImage.js';
-import { renderResults } from './renderResults.js';
+import {
+    initializeFAQ
+} from './faq.js';
+import {
+    renderResults
+} from './renderResults.js';
 
 const searchButton = document.getElementById('searchButton');
+
+initializeFAQ();
 
 searchButton.addEventListener('click', async () => {
     const input = document.getElementById('query');
@@ -12,7 +19,9 @@ searchButton.addEventListener('click', async () => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query: input.value }),
+        body: JSON.stringify({
+            query: input.value
+        }),
     });
 
     if (response.ok) {
