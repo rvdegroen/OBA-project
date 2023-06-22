@@ -7,6 +7,9 @@ import {
     renderResults
 } from './renderResults.js';
 
+
+
+
 const searchButton = document.getElementById('searchButton');
 
 initializeFAQ();
