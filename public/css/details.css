@@ -30,10 +30,13 @@
   align-self: flex-start;
   width: 100px;
   margin-top: 28px;
-  left: 182px;
+}
+.detail-pagina .detail-pagina_image {
+  width: 295px;
 }
 .detail-pagina .detail-pagina_image .detail-pagina_image_cover {
-  margin: 140px 0 0 0;
+  margin: 140px auto 0 auto;
+  display: flex;
 }
 .detail-pagina .detail-pagina_image .detail-pagina_image_icons {
   display: flex;
@@ -104,6 +107,7 @@
     height: 100%;
   }
   .detail-pagina .detail-pagina_image .detail-pagina_back-button {
+    position: static;
     margin: 0;
   }
   .detail-pagina .detail-pagina_image .detail-pagina_img-and-buttons {
