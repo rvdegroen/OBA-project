@@ -31,17 +31,18 @@
 
     // back button
     .detail-pagina_back-button {
-        position: absoute;
+        position: absolute;
         align-self: flex-start;
         width: 100px;
         margin-top: 28px;
+        left: 182px;
     }
 
     // img container with icons
     .detail-pagina_image {
         // cover
         .detail-pagina_image_cover {
-            margin: 70px 0 0 0;
+            margin: 140px 0 0 0;
         }
 
         // favorite and share button container
@@ -73,7 +74,7 @@
             position: absolute;
             left: 50%;
             transform: translate(-50%, -50%);
-            top: 185px;
+            top: 188px;
             width: 95%;
         }
 
