@@ -6,6 +6,10 @@ import {
 import {
     renderResults
 } from './renderResults.js';
+import {
+    chatMessages,
+    displayChatMessages
+} from './chatsParagraph.js';
 
 const searchButton = document.getElementById('searchButton');
 
@@ -32,3 +36,5 @@ searchButton.addEventListener('click', async () => {
         console.error(errorMessage);
     }
 });
+
+displayChatMessages();
