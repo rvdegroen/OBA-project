@@ -19,7 +19,8 @@
     position: relative;
     top: 5em;
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 0.5s 12s forwards;
+   
 
 
 
@@ -35,6 +36,7 @@
         padding: 1em;
         border-radius: 1em;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        z-index: -7;
 
 
         div {

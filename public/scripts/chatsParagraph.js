@@ -1,15 +1,11 @@
-
-
 // Array of chat messages
 export const chatMessages = [
     "Halloo! Welkom bij de oba ",
     "Wat zoek je in de bieb?",
     "Je kan je vraag hieronder typen in de zoekbalk",
-    "Je kan ook zoeken op meeste gestelde vragen.",
-    "Klik op de kruisje als je de vragen niet meer wil zien."
+    "Je kan ook zoeken op meeste gestelde vragen",
+    "Klik op de kruisje als je de vragen niet meer wil zien",
 ];
-
-
 
 
 
@@ -29,7 +25,7 @@ export function displayChatMessages() {
         chatParagraph.className = "chat-paragraph";
         chatParagraph.textContent = chatMessages[currentIndex];
 
-        chatParagraph.style.opacity = "1"; // Initially show the paragraph
+        chatParagraph.style.opacity = "0"; // Initially show the paragraph
         chatContainer.appendChild(chatParagraph);
 
         setTimeout(() => {
@@ -38,7 +34,7 @@ export function displayChatMessages() {
                 chatParagraph.style.opacity = "0"; // Gradually hide the paragraph
                 setTimeout(() => {
                     chatParagraph.remove();
-                    if (currentIndex === chatMessages.length - 1) {
+                    if (currentIndex === chatMessages.length + 1) {
                         chatContainer.style.opacity = "0"; // Hide the container after the last paragraph fades out
                         stick.style.opacity = "0"; // Hide the stick along with the container
                     }
@@ -52,3 +48,6 @@ export function displayChatMessages() {
 
     displayNextMessage();
 }
+
+
+

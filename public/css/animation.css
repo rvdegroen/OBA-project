@@ -1,0 +1,118 @@
+@-webkit-keyframes arrowAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 12em;
+  opacity: 0;
+}
+
+.arrow-container .double-arrow {
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+.arrow-container .double-arrow::before, .arrow-container .double-arrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #3C389E;
+  position: absolute;
+  left: 0;
+  -webkit-animation: arrowAnimation 2s infinite;
+          animation: arrowAnimation 2s infinite;
+}
+
+.arrow-container .double-arrow::before {
+  opacity: .3;
+}
+
+.arrow-container .double-arrow::after {
+  top: 20px;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  /* Delay the animation for the second arrow */
+}
+
+.arrow-container .double-arrow.fade-out {
+  -webkit-animation: fadeOutAnimation 1s forwards;
+          animation: fadeOutAnimation 1s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  /* Delay the fade-out animation */
+}
+
+#robot-container {
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=animation.css.map */

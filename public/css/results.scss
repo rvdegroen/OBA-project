@@ -80,11 +80,80 @@
 
         }
 
+
+
+
     }
+
+}
+
+
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    padding:.7em;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background-color: white;
+
+    z-index: 999;
+
+
+}
+
+
+.popup p {
+    margin: 0 0 10px;
+    color: #3C389E;
+   
+    padding: 1em;
+    border-radius: 2em;
+    white-space: nowrap;
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+
 
 
 
 }
+
+
+.popup button {
+    margin-right: 10px;
+    border: none;
+    width: 50px;
+    padding: .7em;
+    border-radius: 1em;
+
+
+}
+
+
+.popup button:first-child {
+    margin-right: 0;
+    background-color: #242174;
+    color: white;
+
+}
+
+.popup button:last-child {
+    margin-right: 0;
+
+}
+
+
+
+
+
+
 
 
 @media (min-width: 44em) {

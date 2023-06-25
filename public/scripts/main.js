@@ -11,6 +11,14 @@ import {
     displayChatMessages
 } from './chatsParagraph.js';
 
+import {
+    fadeOutAfterDelay
+} from './animation.js';
+
+
+// Call the function
+
+
 const searchButton = document.getElementById('searchButton');
 
 initializeFAQ();
@@ -35,6 +43,10 @@ searchButton.addEventListener('click', async () => {
         const errorMessage = await response.text();
         console.error(errorMessage);
     }
-});
+})
+
+// document.addEventListener("DOMContentLoaded", initializeRobot);
+
+fadeOutAfterDelay();
 
 displayChatMessages();
