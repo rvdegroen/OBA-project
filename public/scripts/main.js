@@ -1,11 +1,13 @@
 // imports
-import * as assistantImage from './assistantImage.js';
 import { initializeFAQ } from './faq.js';
 import { renderResults } from './renderResults.js';
+import { helpFromAssistant } from './helpFromAssistant.js';
+import { desktopAssistantImage } from './helpFromAssistant.js';
 
 const searchButton = document.getElementById('searchButton');
 
 initializeFAQ();
+desktopAssistantImage();
 
 if (searchButton) {
     searchButton.addEventListener('click', async () => {
@@ -27,6 +29,9 @@ if (searchButton) {
             // create a new object where the results are grouped by format
             // and then adjust renderResults to use this
             renderResults(responseData);
+
+            // run the function helpFromAssistant (whitney assistant animation)
+            helpFromAssistant();
         } else {
             const errorMessage = await response.text();
             console.error(errorMessage);
