@@ -3,9 +3,7 @@ import * as assistantImage from './assistantImage.js';
 import {
     initializeFAQ
 } from './faq.js';
-import {
-    renderResults
-} from './renderResults.js';
+
 import {
     chatMessages,
     displayChatMessages
@@ -15,6 +13,7 @@ import {
     fadeOutAfterDelay
 } from './animation.js';
 
+import {renderResults } from './renderResults.js';
 
 // Call the function
 
