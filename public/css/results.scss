@@ -1,20 +1,27 @@
 // check main.js client-side for elements
 
-
-
-
-
 #results {
     z-index: -999;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
     background: var(--background);
     margin: 0;
-    background-color: white;
-    grid-gap: 0;
     padding: 0;
 
+    .format-heading {
+    }
+
+    .results-container {
+        z-index: -999;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        background: var(--background);
+        margin: 0;
+        background-color: white;
+        grid-gap: 0;
+        padding: 0;
+    }
 
     a {
         text-decoration: none;
@@ -22,16 +29,12 @@
         gap: 0;
         text-align: left;
 
-
-
         .book-container {
             display: flex;
             flex-direction: column;
-            border-radius: .5em;
+            border-radius: 0.5em;
             padding: 2px;
 
-
-         
             div {
                 display: flex;
                 justify-content: center;
@@ -39,17 +42,11 @@
                 padding: 0;
                 margin: 0;
 
-
-
                 img {
                     width: 80px;
                     height: 100px;
-
                 }
-
-
             }
-
 
             .detail-div {
                 display: flex;
@@ -57,49 +54,40 @@
                 flex-direction: column;
                 justify-content: flex-end;
 
-
-
                 h3 {
-                    color: #3C389E;
+                    color: #3c389e;
                     font-size: 0.7rem;
                 }
 
-
-
                 p {
                     text-decoration: none;
-                    font-size: .5rem;
+                    font-size: 0.5rem;
                     text-align: left;
                     color: grey;
                 }
-
-
             }
-
-
-
         }
-
     }
-
-
-
 }
-
 
 @media (min-width: 44em) {
     #results {
         z-index: 1;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         margin-left: 15em;
         margin-right: 15em;
         position: relative;
         bottom: 27em;
         background-color: var(--background);
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        justify-content: center;
 
-
+        .results-container {
+            z-index: 1;
+            display: grid;
+            background-color: var(--background);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: center;
+        }
 
         a {
             text-decoration: none;
@@ -107,22 +95,16 @@
             gap: 0;
             text-align: left;
 
-
-
             .book-container {
                 display: flex;
                 flex-direction: column;
-                border-radius: .5em;
+                border-radius: 0.5em;
                 padding: 1em;
-
 
                 &:hover {
                     transform: translateY(-5px);
                     transition: transform 0.2s ease;
                 }
-    
-    
-
 
                 div {
                     display: flex;
@@ -131,18 +113,13 @@
                     padding: 0;
                     margin: 0;
 
-
-
                     img {
                         width: 100px;
                         height: 150px;
-                        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-
+                        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+                            rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                     }
-
-
                 }
-
 
                 .detail-div {
                     display: flex;
@@ -150,17 +127,11 @@
                     padding: 1em;
                     justify-content: flex-start;
 
-
-
-
-
                     h3 {
-                        color: #3C389E;
+                        color: #3c389e;
                         font-size: 16px;
                         font-weight: 500;
                     }
-
-
 
                     p {
                         text-decoration: none;
@@ -169,18 +140,8 @@
                         text-align: left;
                         color: grey;
                     }
-
-
                 }
-
-
-
             }
-
         }
-
-
-
-
     }
 }

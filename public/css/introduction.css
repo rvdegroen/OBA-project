@@ -4,15 +4,10 @@
 
 @media (min-width: 1000px) {
   .introduction {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .introduction img {
     width: 35vw;
   }
-}
-/*# sourceMappingURL=introduction.css.map */
+}/*# sourceMappingURL=introduction.css.map */
