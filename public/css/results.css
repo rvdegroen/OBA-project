@@ -1,5 +1,13 @@
 #results {
   z-index: -999;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+}
+#results .results-container {
+  z-index: -999;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -39,7 +47,7 @@
   justify-content: flex-end;
 }
 #results a .book-container .detail-div h3 {
-  color: #3C389E;
+  color: #3c389e;
   font-size: 0.7rem;
 }
 #results a .book-container .detail-div p {
@@ -52,11 +60,17 @@
 @media (min-width: 44em) {
   #results {
     z-index: 1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-left: 15em;
     margin-right: 15em;
     position: relative;
     bottom: 27em;
+    background-color: var(--background);
+  }
+  #results .results-container {
+    z-index: 1;
+    display: grid;
     background-color: var(--background);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
@@ -96,7 +110,7 @@
     justify-content: flex-start;
   }
   #results a .book-container .detail-div h3 {
-    color: #3C389E;
+    color: #3c389e;
     font-size: 16px;
     font-weight: 500;
   }
