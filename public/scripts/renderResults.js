@@ -1,3 +1,5 @@
+
+
 export function renderResults(results) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
@@ -84,6 +86,9 @@ function shortenTitle(title) {
     }
 
     return title;
+
+
+    initializeRobot();
 }
 
 // Function to shorten the author's name
@@ -95,5 +100,7 @@ function shortenAuthor(authors) {
         return shortenAuthors + '...';
     }
 
+
     return authors;
 }
+
