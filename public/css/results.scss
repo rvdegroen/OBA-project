@@ -10,7 +10,7 @@
     #results {
         position: absolute;
         // so it's below the robot bar
-        top: 170px;
+        top: 132px;
         background-color: var(--background);
         display: flex;
         flex-direction: column;
@@ -28,8 +28,7 @@
         .results-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 10px;
+            gap: 0 20px;
 
             // the container of the whole book
             a {
