@@ -13,13 +13,14 @@
   position: relative;
   height: 30px;
   font-size: .8rem;
+  position: relative;
 }
 
 .chat-icon #paragraph-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: absolute;
   /* Set the position to relative */
   top: 2em;
   -webkit-box-orient: vertical;
@@ -59,7 +60,7 @@
   /* Position stick on the far right */
   -webkit-transform: rotate(55deg);
           transform: rotate(55deg);
-  top: .7em;
+  top: 1.5em;
   color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;

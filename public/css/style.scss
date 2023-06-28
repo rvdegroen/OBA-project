@@ -8,6 +8,7 @@
 @import url('./chat-animation.css');
 @import url('./animation.css');
 @import url('./detailAnimation.css');
+@import url('./animationResults.css');
 
 *,
 *::before,
@@ -36,7 +37,9 @@
 html {
     font-family: 'Inter', sans-serif;
     background-color: var(--background);
+    
 }
+
 
 button {
     cursor: pointer;

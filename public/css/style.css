@@ -7,10 +7,12 @@
 @import url("./chat-animation.css");
 @import url("./animation.css");
 @import url("./detailAnimation.css");
+@import url("./animationResults.css");
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -28,7 +30,7 @@
 }
 
 html {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--background);
 }
 
@@ -40,7 +42,8 @@ h1 {
   display: hidden;
   position: absolute;
   bottom: 0;
-  transform: translateX(-700px);
+  -webkit-transform: translateX(-700px);
+          transform: translateX(-700px);
   z-index: -999;
 }
 
@@ -51,4 +54,5 @@ h1 {
 
 .hidden {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

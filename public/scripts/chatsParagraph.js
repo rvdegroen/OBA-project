@@ -1,5 +1,3 @@
-
-
 export function displayChatMessages() {
     const chatContainer = document.getElementById("paragraph-container");
     const chatMessages = [
@@ -47,4 +45,6 @@ export function displayChatMessages() {
 
     displayNextMessage();
 }
+
+
 

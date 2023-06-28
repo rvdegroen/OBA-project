@@ -84,6 +84,10 @@ nav ul li a {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  nav .logo-div img.logo {
+    width: 60px;
+    background-color: var(--background);
+  }
   nav .virtual-assistant {
     display: none;
   }
