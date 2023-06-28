@@ -88,7 +88,6 @@ function shortenTitle(title) {
     return title;
 
 
-    initializeRobot();
 }
 
 // Function to shorten the author's name

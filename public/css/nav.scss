@@ -7,10 +7,18 @@ nav {
     position: sticky;
     background-color: var(--background);
     top: 0;
+    
 
     .logo-div {
         flex-grow: 1;
+
+         img.logo{
+            width:50px;
+            background-color: var(--background);
+        }
     }
+
+    
 
     .virtual-assistant {
         display: visible;
