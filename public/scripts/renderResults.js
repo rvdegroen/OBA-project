@@ -1,5 +1,12 @@
 export function renderResults(results) {
+    // show parent_results when searching for books and stuffs
+    document.getElementById('parent_results').classList.remove('hidden');
     const resultsDiv = document.getElementById('results');
+
+    // hiden paragraph-container & stick when searching for books and stufss
+    document.getElementById('paragraph-container').classList.add('hidden');
+    document.querySelector('.stick').classList.add('hidden');
+
     resultsDiv.innerHTML = ''; // Clear previous results
 
     const resultsGroupedByFormat = {};
@@ -84,7 +91,6 @@ function shortenTitle(title) {
     }
 
     return title;
-
 }
 
 // Function to shorten the author's name

@@ -11,8 +11,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +29,7 @@
 }
 
 html {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background);
 }
 
@@ -42,8 +41,7 @@ h1 {
   display: hidden;
   position: absolute;
   bottom: 0;
-  -webkit-transform: translateX(-700px);
-          transform: translateX(-700px);
+  transform: translateX(-700px);
   z-index: -999;
 }
 
@@ -53,6 +51,5 @@ h1 {
 }
 
 .hidden {
-  display: none;
-}
-/*# sourceMappingURL=style.css.map */
+  display: none !important;
+}/*# sourceMappingURL=style.css.map */

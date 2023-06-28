@@ -8,19 +8,17 @@ export function desktopAssistantImage() {
     }
 }
 
-
-
 //Create container for the animation
 export function helpFromAssistant() {
-    var resultsChatContainer = document.createElement("div");
-    resultsChatContainer.id = "results-container";
+    var resultsChatContainer = document.createElement('div');
+    resultsChatContainer.id = 'results-container';
 
     // Create message container
-    var resultsMessagesContainer = document.createElement("div");
-    resultsMessagesContainer.id = "results-message";
+    var resultsMessagesContainer = document.createElement('div');
+    resultsMessagesContainer.id = 'results-message';
     resultsChatContainer.appendChild(resultsMessagesContainer);
 
-    var imageContainer = document.createElement("div");
+    var imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container'); // Add a CSS class to the image container
 
     // Select image
@@ -31,27 +29,25 @@ export function helpFromAssistant() {
     imageContainer.appendChild(digitalAssistantImg); // Append the image to the image container
     resultsChatContainer.appendChild(imageContainer); // Append the image container to the results chat container
 
-
     // Create message asking for help
-    var helpMessage = document.createElement("p");
-    helpMessage.textContent = "Heb je hulp nodig op deze pagina?";
-    helpMessage.classList.add("message-text");
+    var helpMessage = document.createElement('p');
+    helpMessage.textContent = 'Heb je hulp nodig op deze pagina?';
+    helpMessage.classList.add('message-text');
     resultsMessagesContainer.appendChild(helpMessage);
-
 
     // Create container for buttons
     var buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');
 
     // Create "Yes" button
-    var yesButton = document.createElement("button");
-    yesButton.id = "yesButton";
-    yesButton.textContent = "Yes";
+    var yesButton = document.createElement('button');
+    yesButton.id = 'yesButton';
+    yesButton.textContent = 'Ja';
 
     // Create "No" button
-    var noButton = document.createElement("button");
-    noButton.id = "noButton";
-    noButton.textContent = "No";
+    var noButton = document.createElement('button');
+    noButton.id = 'noButton';
+    noButton.textContent = 'Nee';
 
     // Append buttons to the button container
     buttonContainer.appendChild(yesButton);
@@ -61,18 +57,18 @@ export function helpFromAssistant() {
     resultsChatContainer.appendChild(buttonContainer);
 
     // Add event listeners to the buttons
-    yesButton.addEventListener("click", displayResultsMessages);
-    noButton.addEventListener("click", displayLaterMessage);
+    yesButton.addEventListener('click', displayResultsMessages);
+    noButton.addEventListener('click', displayLaterMessage);
 
     function displayResultsMessages() {
         // Clear message container
-        resultsMessagesContainer.innerHTML = "";
+        resultsMessagesContainer.innerHTML = '';
 
         var resultsMessages = [
-            "Dit zijn je zoek resultaten",
-            "Als je op een van deze klikt , dan vind jemeer informatie ",
-            "Heb je een medewerker nodig",
-            "Druk op de knop vraagteken knop"
+            'Dit zijn je zoek resultaten.',
+            'Als je op één van deze klikt , dan vindt je meer informatie.',
+            'Heb je een medewerker nodig?',
+            'Druk dan op de vraagteken knop.',
         ];
 
         var index = 0;
@@ -81,12 +77,12 @@ export function helpFromAssistant() {
         function displayNextMessage() {
             var message = resultsMessages[index];
 
-            var messageItem = document.createElement("p");
+            var messageItem = document.createElement('p');
             messageItem.textContent = message;
-            messageItem.classList.add('message-texts')
+            messageItem.classList.add('message-texts');
 
             // Show current message
-            resultsMessagesContainer.innerHTML = "";
+            resultsMessagesContainer.innerHTML = '';
             resultsMessagesContainer.appendChild(messageItem);
 
             index++;
@@ -103,17 +99,14 @@ export function helpFromAssistant() {
     // Function to display the message for asking questions later
     function displayLaterMessage() {
         // Clear message container
-        resultsMessagesContainer.innerHTML = "";
+        resultsMessagesContainer.innerHTML = '';
 
-        var message = document.createElement("p");
-        message.textContent = "You can ask a question later.";
+        var message = document.createElement('p');
+        message.textContent =
+            'Je kan altijd een medewerker spreken rechts boven.';
         resultsMessagesContainer.appendChild(message);
-        message.classList.add("message-text2");
-
+        message.classList.add('message-text2');
     }
 
     document.body.appendChild(resultsChatContainer);
 }
-
-
-
