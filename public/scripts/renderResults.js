@@ -1,5 +1,3 @@
-
-
 export function renderResults(results) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
@@ -41,7 +39,7 @@ export function renderResults(results) {
             const detailDiv = document.createElement('div');
 
             const bookTitle = shortenTitle(searchResult.titles[0]);
-            const authors = shortenAuthor(searchResult.authors.join(', '));
+            const authors = shortenAuthor(searchResult.authors);
 
             // rendering
             image.src = searchResult.coverimages[1];
@@ -87,19 +85,22 @@ function shortenTitle(title) {
 
     return title;
 
-
 }
 
 // Function to shorten the author's name
 function shortenAuthor(authors) {
-    const authorNames = authors.split(', ');
+    // if there is no auteur then put unknown auteur
+    if (!authors) {
+        return 'Onbekende auteur';
+    }
+
+    const authorNames =
+        typeof authors === 'string' ? authors.split(', ') : authors;
 
     if (authorNames.length > 1) {
         const shortenAuthors = authorNames.slice(0, 1).join(', ');
         return shortenAuthors + '...';
     }
 
-
     return authors;
 }
-
