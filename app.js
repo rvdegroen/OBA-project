@@ -9,7 +9,7 @@ const apiRoutes = require('./routes/api');
 
 // VARIABLES
 const app = express();
-const port = 4400;
+const port = process.env.PORT || 4400;
 
 // MIDDLEWARE
 // for static files
