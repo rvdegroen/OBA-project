@@ -63,12 +63,31 @@
             cursor: pointer;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+            &:hover {
+                background-color: var(--button-hover-bg);
+                color: var(--button-hover-text);
+            }
+        }
+
+        #noButton {
+            background: white;
+
+            &:hover {
+                background-color: var(--button-hover-bg);
+                color: var(--button-hover-text);
+            }
         }
 
         #yesButton {
-            background-color: #3c389e;
-            color: white;
+            background-color: var(--primary-button-bg);
+            color: var(--primary-button-text);
             margin-left: auto;
+
+            &:hover {
+                background-color: var(--button-hover-bg);
+                color: var(--button-hover-text);
+            }
         }
     }
 }
@@ -83,9 +102,6 @@
         // left: 50em;
         // top: 5em;
         // min-height: 40vh;
-        position: fixed;
-        right: 0;
-        bottom: 0;
 
         #results-message {
             border-radius: 0.3em;

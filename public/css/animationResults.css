@@ -54,18 +54,28 @@
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+#results-container .button-container button:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+}
+#results-container .button-container #noButton {
+  background: white;
+}
+#results-container .button-container #noButton:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+}
 #results-container .button-container #yesButton {
-  background-color: #3c389e;
-  color: white;
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
   margin-left: auto;
+}
+#results-container .button-container #yesButton:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
 }
 
 @media (min-width: 44em) {
-  #results-container {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-  }
   #results-container #results-message {
     border-radius: 0.3em;
     height: 80px;

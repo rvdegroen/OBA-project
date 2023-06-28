@@ -7,6 +7,9 @@ export function renderResults(results) {
     document.getElementById('paragraph-container').classList.add('hidden');
     document.querySelector('.stick').classList.add('hidden');
 
+    // hide faq when you search
+    document.querySelector('.faq-wrapper').classList.add('hidden');
+
     resultsDiv.innerHTML = ''; // Clear previous results
 
     const resultsGroupedByFormat = {};
