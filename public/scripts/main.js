@@ -1,27 +1,39 @@
-// imports
+// 
+
+import {
+    initializeFAQ
+} from './faq.js';
+import {
+    renderResults
+} from './renderResults.js';
+import {
+    helpFromAssistant
+} from './helpFromAssistant.js';
+import {
+    desktopAssistantImage
+} from './helpFromAssistant.js';
+import {
+    displayChatMessages
+} from './chatsParagraph.js';
+import {
+    fadeOutAfterDelay
+} from './animation.js';
+import {
+    displayMessages
+} from './animationDetails.js';
 
 
 
 
 
+initializeFAQ();
+desktopAssistantImage();
 
-
-// Call the function
-
-
-import { initializeFAQ } from './faq.js';
-import { renderResults } from './renderResults.js';
-import { helpFromAssistant } from './helpFromAssistant.js';
-import { desktopAssistantImage } from './helpFromAssistant.js';
-import {chatMessages,displayChatMessages} from './chatsParagraph.js';
-import {fadeOutAfterDelay} from './animation.js';
 
 
 
 const searchButton = document.getElementById('searchButton');
 
-initializeFAQ();
-desktopAssistantImage();
 
 if (searchButton) {
     searchButton.addEventListener('click', async () => {
@@ -44,11 +56,6 @@ if (searchButton) {
             // and then adjust renderResults to use this
             renderResults(responseData);
 
-
-fadeOutAfterDelay();
-
-displayChatMessages();
-
             // run the function helpFromAssistant (whitney assistant animation)
             helpFromAssistant();
         } else {
@@ -56,5 +63,18 @@ displayChatMessages();
             console.error(errorMessage);
         }
     });
+
+
+    displayChatMessages();
+    fadeOutAfterDelay();
+
+
+
 }
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    displayMessages(); // Call the displayMessages function
+});

@@ -1,4 +1,8 @@
 // mobile detail page
+
+
+
+
 .detail-pagina {
     margin: 0 15px;
     display: flex;
@@ -41,6 +45,7 @@
     // img container with icons
     .detail-pagina_image {
         width: 295px;
+
         // cover
         .detail-pagina_image_cover {
             margin: 140px auto 0 auto;
@@ -70,6 +75,7 @@
     }
 
     .detail-pagina_informatie {
+
         // item title
         h2 {
             text-align: center;
@@ -117,6 +123,7 @@
 
 @media (min-width: 550px) {
     .detail-pagina_informatie {
+
         // item title
         h2 {
             width: 500px !important;
@@ -163,6 +170,7 @@
 
         // right side
         .detail-pagina_informatie {
+
             // title of the page
             h2 {
                 position: static;

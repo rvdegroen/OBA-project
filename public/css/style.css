@@ -6,6 +6,7 @@
 @import url("./faq.css");
 @import url("./chat-animation.css");
 @import url("./animation.css");
+@import url("./detailAnimation.css");
 *,
 *::before,
 *::after {
@@ -46,4 +47,8 @@ h1 {
 .oba-title {
   opacity: 0;
   position: absolute;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@ export function desktopAssistantImage() {
     if (animationImage) {
         setTimeout(function () {
             animationImage.src = '/images/character/animation/frame2.png';
-        }, 2000);
+        }, 10000);
     }
 }
 

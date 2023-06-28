@@ -84,6 +84,7 @@ function shortenTitle(title) {
     }
 
     return title;
+
 }
 
 // Function to shorten the author's name
