@@ -1,34 +1,30 @@
 @-webkit-keyframes arrowAnimation {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
   }
-
   50% {
     -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
+            transform: translateY(-10px);
   }
-
   100% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes arrowAnimation {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
   }
-
   50% {
     -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
+            transform: translateY(-10px);
   }
-
   100% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -36,7 +32,6 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -46,7 +41,6 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -57,11 +51,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   top: 12em;
   opacity: 0;
@@ -73,8 +67,7 @@
   position: relative;
 }
 
-.arrow-container .double-arrow::before,
-.arrow-container .double-arrow::after {
+.arrow-container .double-arrow::before, .arrow-container .double-arrow::after {
   content: "";
   width: 0;
   height: 0;
@@ -84,7 +77,7 @@
   position: absolute;
   left: 0;
   -webkit-animation: arrowAnimation 2s infinite;
-  animation: arrowAnimation 2s infinite;
+          animation: arrowAnimation 2s infinite;
 }
 
 .arrow-container .double-arrow::before {
@@ -94,143 +87,44 @@
 .arrow-container .double-arrow::after {
   top: 20px;
   -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+          animation-delay: 0.5s;
   /* Delay the animation for the second arrow */
 }
 
 .arrow-container .double-arrow.fade-out {
   -webkit-animation: fadeOutAnimation 1s forwards;
-  animation: fadeOutAnimation 1s forwards;
+          animation: fadeOutAnimation 1s forwards;
   -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+          animation-delay: 2s;
   /* Delay the fade-out animation */
 }
 
 @media (min-width: 44em) {
-
-  #detail-arrow-container {
+  #arrows {
+    width: 0;
+    height: 0;
     position: relative;
-    opacity: 0;
-
-    #arrows {
-      width: 0;
-      height: 0;
-      position: relative;
-
-
-      &::before,
-      &::after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 20px solid #3C389E;
-
-        position: absolute;
-        left: 0;
-        -webkit-animation: arrowAnimation 2s infinite;
-        animation: arrowAnimation 2s infinite;
-      }
-
-      &::before {
-        opacity: .3;
-      }
-
-      &::after {
-        top: 20px;
-        -webkit-animation-delay: 0.5s;
-        animation-delay: 0.5s;
-
-      }
-    }
   }
-
-
-  @keyframes arrowAnimationDetails {
-    0% {
-      opacity: 0;
-    }
-
-    20% {
-      opacity: 1;
-    }
-
-    80% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-
-
-
-
-  .detail-arrow-container1 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  #arrows::before, #arrows::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #3C389E;
     position: absolute;
-    animation: arrowAnimationDetails 4s;
-    animation-fill-mode: forwards;
-    animation-delay: 11s;
-
-
-    .arrow-talk-with-a-worker {
-      background-color: green;
-      transform: rotate(-180deg);
-      z-index: 10;
-      right: 9em;
-      top: 2.5em;
-
-
-    }
-
+    left: 0;
+    -webkit-animation: arrowAnimation 2s infinite;
+            animation: arrowAnimation 2s infinite;
   }
-
-
-  .detail-arrow-container2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    animation: arrowAnimationDetails 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-
-
-    .arrow-favorites {
-      background-color: green;
-      transform: rotate(-180deg);
-      z-index: 10;
-      right: 24em;
-      top: 2.5em;
-
-    }
+  #arrows::before {
+    opacity: .3;
   }
-
-  .detail-arrow-container3 {
-    position: absolute;
-    transform: rotate(-90deg);
-    top: 1.2em;
-    left: -6em;
-    animation: arrowAnimationDetails 2s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-
-
+  #arrows::after {
+    top: 20px;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    /* Delay the animation for the second arrow */
   }
-
-  .detail-arrow-container4 {
-    position: absolute;
-    transform: rotate(90deg);
-    left: 6em;
-    animation: arrowAnimationDetails 2s;
-    animation-delay: 10s;
-    animation-fill-mode: forwards;
-  }
-
-
 }
+/*# sourceMappingURL=animation.css.map */

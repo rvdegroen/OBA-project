@@ -7,6 +7,7 @@
 @import url("./chat-animation.css");
 @import url("./animation.css");
 @import url("./detailAnimation.css");
+@import url("./animationResults.css");
 *,
 *::before,
 *::after {
@@ -23,7 +24,7 @@
   --primary-button-text: white;
   --primary-button-hover: #242174;
   --shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
-  --button-hover-bg: #3c389e;
+  --button-hover-bg: #1b1869;
   --button-hover-text: #ffffff;
 }
 
@@ -50,5 +51,5 @@ h1 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

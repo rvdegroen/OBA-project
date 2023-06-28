@@ -5,12 +5,12 @@
     z-index: -999;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 270px;
 
     #results {
         position: absolute;
         // so it's below the robot bar
-        top: 132px;
+      top:90px;
         background-color: var(--background);
         display: flex;
         flex-direction: column;
@@ -43,6 +43,7 @@
 
                 .detail-div {
                     margin-bottom: 20px;
+
                     // title of book
                     h3 {
                         color: #3c389e;
