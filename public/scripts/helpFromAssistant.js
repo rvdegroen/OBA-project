@@ -102,8 +102,7 @@ export function helpFromAssistant() {
         resultsMessagesContainer.innerHTML = '';
 
         var message = document.createElement('p');
-        message.textContent =
-            'Je kan altijd een medewerker spreken rechts boven.';
+        message.textContent = 'Je kan altijd een medewerker spreken.';
         resultsMessagesContainer.appendChild(message);
         message.classList.add('message-text2');
     }

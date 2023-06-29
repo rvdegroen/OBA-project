@@ -4,6 +4,10 @@ exports.index = function (req, res) {
     res.render('pages/index');
 };
 
+exports.favorite = function (req, res) {
+    res.render('pages/favorite');
+};
+
 exports.details = async function (req, res) {
     const id = req.params.id;
 
