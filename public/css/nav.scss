@@ -8,9 +8,17 @@ nav {
     background-color: var(--background);
     top: 0;
 
+
     .logo-div {
         flex-grow: 1;
+
+        img.logo {
+            width: 50px;
+            background-color: var(--background);
+        }
     }
+
+
 
     .virtual-assistant {
         display: visible;
@@ -33,6 +41,7 @@ nav {
 
         li {
             padding: 10px 0 10px 0;
+
             a {
                 display: flex;
                 flex-direction: column;
@@ -53,6 +62,11 @@ nav {
 
         .logo-div {
             flex-grow: 1;
+
+            img.logo {
+                width: 60px;
+                background-color: var(--background);
+            }
         }
 
         .virtual-assistant {

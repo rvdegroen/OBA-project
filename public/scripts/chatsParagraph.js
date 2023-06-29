@@ -1,16 +1,13 @@
-// Array of chat messages
-export const chatMessages = [
-    "Halloo! Welkom bij de oba ",
-    "Wat zoek je in de bieb?",
-    "Je kan je vraag hieronder typen in de zoekbalk",
-    "Je kan ook zoeken op meeste gestelde vragen",
-    "Klik op de kruisje als je de vragen niet meer wil zien",
-];
-
-
-
 export function displayChatMessages() {
     const chatContainer = document.getElementById("paragraph-container");
+    const chatMessages = [
+        "Halloo! Welkom bij de oba ",
+        "Wat zoek je in de bieb?",
+        "Je kan je vraag hieronder typen in de zoekbalk",
+        "Je kan ook zoeken op meeste gestelde vragen",
+        "Klik op de kruisje als je de vragen niet meer wil zien",
+    ];
+
     const stick = document.getElementsByClassName("stick")[0]; // Add this line to get the stick element
     let currentIndex = 0;
 

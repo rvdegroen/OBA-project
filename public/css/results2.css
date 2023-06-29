@@ -5,18 +5,26 @@
   max-width: 90%;
   margin: 0 auto;
 }
+
 #results .format-heading {
   margin: 20px 0 10px 15%;
 }
+
 #results .format-heading:first-of-type {
   margin: 50px 0 10px 15%;
 }
+
 #results .results-container {
   z-index: -999;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between !important;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
+
 #results a {
   margin-top: 10px;
   text-decoration: none;
@@ -24,33 +32,58 @@
   gap: 0;
   text-align: left;
 }
+
 #results a .book-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 0.5em;
   padding: 2px;
 }
+
 #results a .book-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   margin: 0;
 }
+
 #results a .book-container div img {
   width: 80px;
   height: 100px;
 }
+
 #results a .book-container .detail-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 #results a .book-container .detail-div h3 {
   color: #3c389e;
   font-size: 0.7rem;
 }
+
 #results a .book-container .detail-div p {
   text-decoration: none;
   font-size: 0.5rem;
@@ -70,10 +103,14 @@
   }
   #results .results-container {
     z-index: 1;
+    display: -ms-grid;
     display: grid;
     background-color: var(--background);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #results a {
     text-decoration: none;
@@ -82,32 +119,55 @@
     text-align: left;
   }
   #results a .book-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 0.5em;
     padding: 1em;
   }
   #results a .book-container:hover {
-    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   #results a .book-container div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
     margin: 0;
   }
   #results a .book-container div img {
     width: 100px;
     height: 150px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   }
   #results a .book-container .detail-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 1em;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #results a .book-container .detail-div h3 {
     color: #3c389e;
@@ -120,4 +180,5 @@
     text-align: left;
     color: grey;
   }
-}/*# sourceMappingURL=results2.css.map */
+}
+/*# sourceMappingURL=results2.css.map */

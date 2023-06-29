@@ -99,21 +99,32 @@
   /* Delay the fade-out animation */
 }
 
-#robot-container {
-  background-color: green;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: none;
+@media (min-width: 44em) {
+  #arrows {
+    width: 0;
+    height: 0;
+    position: relative;
+  }
+  #arrows::before, #arrows::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #3C389E;
+    position: absolute;
+    left: 0;
+    -webkit-animation: arrowAnimation 2s infinite;
+            animation: arrowAnimation 2s infinite;
+  }
+  #arrows::before {
+    opacity: .3;
+  }
+  #arrows::after {
+    top: 20px;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    /* Delay the animation for the second arrow */
+  }
 }
 /*# sourceMappingURL=animation.css.map */
