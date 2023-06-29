@@ -47,7 +47,8 @@
         img {
             &:hover {
                 // opacity: 50%;
-                filter: hue-rotate(90deg) contrast(200%);
+                // filter: hue-rotate(90deg) contrast(200%);
+                filter: invert(75%) hue-rotate(180deg) contrast(200%);
             }
         }
     }

@@ -36,7 +36,7 @@
   transition: 0.2s ease-in-out;
 }
 .detail-pagina button img:hover {
-  filter: hue-rotate(90deg) contrast(200%);
+  filter: invert(75%) hue-rotate(180deg) contrast(200%);
 }
 .detail-pagina .detail-pagina_back-button {
   position: absolute;
