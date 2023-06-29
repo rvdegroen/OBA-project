@@ -44,20 +44,23 @@
     }
 
     .stick {
-        width: 20px;
-        position: absolute;
-        height: 18px;
+        // width: 20px;
+        // position: absolute;
+        // height: 18px;
 
-        background-color: white;
-        right: 5em;
 
-        /* Position stick on the far right */
-        transform: rotate(55deg);
+        // background-color: white;
+        // right: 5em;
 
-        top: 1.5em;
-        color: white;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        z-index: -1;
+        // /* Position stick on the far right */
+        // transform: rotate(55deg);
+
+        // top: 1.5em;
+        // color: white;
+        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        // z-index: -1;
+
+        display:none;
     }
 
 

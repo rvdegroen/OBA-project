@@ -71,14 +71,21 @@
             align-items: right;
   }
   .message-wrapper #message-list {
-    top: 15em;
+    top: 14em;
     right: 2em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     border-radius: .3em;
-    width: 13%;
+    width: 18%;
     height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    align-items: center;
   }
   .message-wrapper #message-list .message {
     white-space: pre-wrap;
@@ -87,6 +94,7 @@
   .message-wrapper .stick1 {
     top: 20em;
     right: 5em;
+    display: none;
   }
   .digital-assistant-container {
     display: -webkit-box;
@@ -101,6 +109,7 @@
     position: absolute;
     width: 250px;
     top: 25em;
+    right: 2em;
   }
 }
 /*# sourceMappingURL=detailAnimation.css.map */
