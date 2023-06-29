@@ -1,58 +1,40 @@
 .chat-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: #161616;
-  top: .3em;
+  top: 0.3em;
   position: relative;
   height: 30px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   position: relative;
 }
-
 .chat-icon #paragraph-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   /* Set the position to relative */
   top: 2em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-radius: 2rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   height: 50px;
   width: 80%;
 }
-
 .chat-icon .chat-paragraph {
   color: #3C389E;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 500;
   padding: 1em;
-  font-size: .8rem;
-  -webkit-transition: opacity 0s ease-in-out;
+  font-size: 0.8rem;
   transition: opacity 0s ease-in-out;
 }
-
 .chat-icon .stick {
+
   display: none;
+
 }
 
 @media (min-width: 44em) {
@@ -61,20 +43,13 @@
     position: relative;
   }
   .chat-icon #paragraph-container {
-    border-radius: .3em;
+    border-radius: 0.3em;
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
+    justify-content: flex-start;
+    align-items: left;
     right: 45em;
-    -webkit-transform: translateX(-50%) translateY(-480%);
-            transform: translateX(-50%) translateY(-480%);
+    transform: translateX(-50%) translateY(-480%);
     height: 80px;
     width: 18%;
   }
@@ -85,9 +60,7 @@
   .chat-icon .stick {
     right: 55em;
     height: 30px;
-    -webkit-transform: translateY(-305px) rotate(-65deg);
-            transform: translateY(-305px) rotate(-65deg);
-    border-radius: .3em;
+    transform: translateY(-305px) rotate(-65deg);
+    border-radius: 0.3em;
   }
-}
-/*# sourceMappingURL=chat-animation.css.map */
+}/*# sourceMappingURL=chat-animation.css.map */

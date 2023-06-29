@@ -9,6 +9,7 @@
 @import url('./animation.css');
 @import url('./detailAnimation.css');
 @import url('./animationResults.css');
+@import url('./favorites.css');
 
 *,
 *::before,
@@ -43,16 +44,12 @@ button {
     cursor: pointer;
 }
 
-h1 {
+.oba-title {
     display: hidden;
     position: absolute;
     bottom: 0;
     transform: translateX(-700px);
     z-index: -999;
-}
-
-// to hide the title on the first page
-.oba-title {
     opacity: 0;
     position: absolute;
 }
