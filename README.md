@@ -1,5 +1,34 @@
 # laagdrempelig-zoeken
 
+
+<img width="700" alt="image" src="https://github.com/rvdegroen/OBA-project/assets/90154152/c0c9bea8-f616-473e-b186-239e1889a21f">
+
+## Over het opdracht
+
+
+
+
+### Team 
+- Roshnie de groen 
+- Whitney Abrah
+
+## Demo📷
+Hier vind je een live demo van het project : https://oba-catalogus.adaptable.app/
+
+## Installaties
+
+
+
+
+### Packages geinstalleerd 
+- axios
+- dotenv
+- ejs
+- express
+- sass
+- nodemon
+- 
+
 # Productbiografie
 
 Wij hebben een individuele productbiografie geschreven en dit zijn de linkjes:
@@ -22,3 +51,9 @@ design review:
 -   laat gelijk de voorbeeld vragen zien zodat de gebruiker een idee krijgt
 -   maakt de animatie fancy
 -
+
+
+## Licence
+Dit project valt onder de [MIT-licentie](LICENSE).
+
+
