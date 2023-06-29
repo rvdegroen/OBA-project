@@ -46,7 +46,8 @@
     button {
         img {
             &:hover {
-                opacity: 50%;
+                // opacity: 50%;
+                filter: hue-rotate(90deg) contrast(200%);
             }
         }
     }
