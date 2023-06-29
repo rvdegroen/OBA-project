@@ -32,17 +32,9 @@
   transition: opacity 0s ease-in-out;
 }
 .chat-icon .stick {
-  width: 20px;
-  position: absolute;
-  height: 18px;
-  background-color: white;
-  right: 5em;
-  /* Position stick on the far right */
-  transform: rotate(55deg);
-  top: 1.5em;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  z-index: -1;
+
+  display: none;
+
 }
 
 @media (min-width: 44em) {

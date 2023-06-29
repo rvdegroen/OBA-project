@@ -12,7 +12,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +31,7 @@
 }
 
 html {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--background);
 }
 
@@ -42,7 +43,8 @@ button {
   display: hidden;
   position: absolute;
   bottom: 0;
-  transform: translateX(-700px);
+  -webkit-transform: translateX(-700px);
+          transform: translateX(-700px);
   z-index: -999;
   opacity: 0;
   position: absolute;
@@ -50,4 +52,5 @@ button {
 
 .hidden {
   display: none !important;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
