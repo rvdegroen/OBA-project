@@ -12,8 +12,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +30,7 @@
 }
 
 html {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background);
 }
 
@@ -43,14 +42,32 @@ button {
   display: hidden;
   position: absolute;
   bottom: 0;
-  -webkit-transform: translateX(-700px);
-          transform: translateX(-700px);
+  transform: translateX(-700px);
   z-index: -999;
   opacity: 0;
   position: absolute;
 }
 
+#modal {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  top: 20px;
+}
+#modal img {
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+#modal::backdrop {
+  background-color: rgba(191, 191, 191, 0.3882352941);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
 .hidden {
   display: none !important;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

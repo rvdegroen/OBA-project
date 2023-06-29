@@ -1,8 +1,5 @@
 // mobile detail page
 
-
-
-
 .detail-pagina {
     margin: 0 15px;
     display: flex;
@@ -23,6 +20,12 @@
     .primary-button {
         background-color: var(--primary-button-bg);
         color: var(--primary-button-text);
+
+        &:hover {
+            background-color: var(--button-hover-bg);
+            color: var(--button-hover-text);
+            transition: 0.2s ease-in-out;
+        }
     }
 
     .secondary-button {
@@ -31,6 +34,23 @@
         color: var(--secondary-button-text);
         display: flex;
         justify-content: center;
+
+        &:hover {
+            background-color: var(--button-hover-bg);
+            color: var(--button-hover-text);
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    // like and share button
+    button {
+        img {
+            &:hover {
+                // opacity: 50%;
+                // filter: hue-rotate(90deg) contrast(200%);
+                filter: invert(75%) hue-rotate(180deg) contrast(200%);
+            }
+        }
     }
 
     // back button
@@ -75,7 +95,6 @@
     }
 
     .detail-pagina_informatie {
-
         // item title
         h2 {
             text-align: center;
@@ -123,7 +142,6 @@
 
 @media (min-width: 550px) {
     .detail-pagina_informatie {
-
         // item title
         h2 {
             width: 500px !important;
@@ -170,7 +188,6 @@
 
         // right side
         .detail-pagina_informatie {
-
             // title of the page
             h2 {
                 position: static;

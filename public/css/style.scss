@@ -54,6 +54,26 @@ button {
     position: absolute;
 }
 
+#modal {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    margin: 0 auto;
+    top: 20px;
+
+    img {
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+    &::backdrop {
+        background-color: #bfbfbf63;
+        backdrop-filter: blur(5px);
+    }
+}
+
 .hidden {
     display: none !important;
 }
