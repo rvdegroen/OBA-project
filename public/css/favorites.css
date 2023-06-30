@@ -22,6 +22,9 @@
 .favorites .format-heading {
   margin: 10px 0 10px 0;
 }
+.favorites h2 {
+  padding-top: 20px;
+}
 .favorites .results-container {
   display: flex;
   flex-wrap: wrap;

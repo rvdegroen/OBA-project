@@ -56,13 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // dialog src: https://www.youtube.com/watch?v=ywtkJkxJsdg&t=3s
 
-modal.classList.add('hidden');
-dialogButton.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-    modal.showModal();
-});
-
-closeButton.addEventListener('click', () => {
+if (modal) {
     modal.classList.add('hidden');
-    modal.close();
-});
+}
+
+if (dialogButton) {
+    dialogButton.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.showModal();
+    });
+}
+
+if (closeButton) {
+    closeButton.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.close();
+    });
+}
